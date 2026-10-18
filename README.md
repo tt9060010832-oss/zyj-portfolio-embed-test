@@ -1,13 +1,9 @@
-# 张永杰作品集 · 免费部署测试
+# 张永杰 · 个人作品集网页预览版
 
-该仓库用于测试 GitHub 与 Render 静态托管，以及 B站官方外链播放器。
+完整收录 9 部 AI 作品和 9 部摄像作品。此版本使用压缩后的 720p 网页播放副本，封面不变，原视频文件保留在本地。
 
-## 部署参数
+- Build Command：`node build.cjs`
+- Publish Directory：`dist`
+- Render 类型：Static Site
 
-- 服务类型：Static Site
-- 根目录：仓库根目录
-- Build Command：`echo Static site ready`
-- Publish Directory：`.`
-- 使用平台提供的 onrender.com 域名，不添加付费服务。
-
-此页面没有本地视频文件、第三方字体、服务端进程或数据库。示例视频为用户提供的 B站链接，仅作播放测试。
+视频校验通过后复制到发布目录。无服务器进程、数据库或付费计算实例。
