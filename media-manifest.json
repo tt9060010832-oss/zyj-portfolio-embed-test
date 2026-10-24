@@ -41,20 +41,12 @@
       "output": "assets/covers/shoot-01.jpg"
     },
     {
-      "input": "cover--shoot-02.jpg",
-      "output": "assets/covers/shoot-02.jpg"
-    },
-    {
       "input": "cover--shoot-03.jpg",
       "output": "assets/covers/shoot-03.jpg"
     },
     {
       "input": "cover--shoot-04.jpg",
       "output": "assets/covers/shoot-04.jpg"
-    },
-    {
-      "input": "cover--shoot-05.jpg",
-      "output": "assets/covers/shoot-05.jpg"
     },
     {
       "input": "cover--shoot-06.jpg",
@@ -65,12 +57,56 @@
       "output": "assets/covers/shoot-07.jpg"
     },
     {
-      "input": "cover--shoot-08.jpg",
-      "output": "assets/covers/shoot-08.jpg"
+      "input": "cover--ai-10.jpg",
+      "output": "assets/covers/ai-10.jpg"
     },
     {
-      "input": "cover--shoot-09.jpg",
-      "output": "assets/covers/shoot-09.jpg"
+      "input": "cover--ai-11.jpg",
+      "output": "assets/covers/ai-11.jpg"
+    },
+    {
+      "input": "cover--shoot-10.jpg",
+      "output": "assets/covers/shoot-10.jpg"
+    },
+    {
+      "input": "cover--shoot-11.jpg",
+      "output": "assets/covers/shoot-11.jpg"
+    },
+    {
+      "input": "cover--shoot-12.jpg",
+      "output": "assets/covers/shoot-12.jpg"
+    },
+    {
+      "input": "cover--shoot-13.jpg",
+      "output": "assets/covers/shoot-13.jpg"
+    },
+    {
+      "input": "cover--shoot-14.jpg",
+      "output": "assets/covers/shoot-14.jpg"
+    },
+    {
+      "input": "cover--shoot-15.jpg",
+      "output": "assets/covers/shoot-15.jpg"
+    },
+    {
+      "input": "cover--shoot-16.jpg",
+      "output": "assets/covers/shoot-16.jpg"
+    },
+    {
+      "input": "cover--shoot-17.jpg",
+      "output": "assets/covers/shoot-17.jpg"
+    },
+    {
+      "input": "cover--shoot-18.jpg",
+      "output": "assets/covers/shoot-18.jpg"
+    },
+    {
+      "input": "cover--shoot-19.jpg",
+      "output": "assets/covers/shoot-19.jpg"
+    },
+    {
+      "input": "cover--shoot-20.jpg",
+      "output": "assets/covers/shoot-20.jpg"
     }
   ],
   "videos": [
@@ -155,14 +191,6 @@
       ]
     },
     {
-      "output": "assets/videos/shoot-02.mp4",
-      "bytes": 1423546,
-      "sha256": "7dac2d5850d84e973954681e21c96cee7e33029f09885ee892b691e0295ffddd",
-      "parts": [
-        "video--shoot-02.mp4"
-      ]
-    },
-    {
       "output": "assets/videos/shoot-03.mp4",
       "bytes": 2331945,
       "sha256": "cbfc11c186af835f75b45b9b275531168f3ec9f5fba0b6cae18f76ed73b36be3",
@@ -176,14 +204,6 @@
       "sha256": "389a723fee24c208b57a50c9223f40803d360effda97ac47fe93fb181534c50b",
       "parts": [
         "video--shoot-04.mp4"
-      ]
-    },
-    {
-      "output": "assets/videos/shoot-05.mp4",
-      "bytes": 2490835,
-      "sha256": "b40dd38cb31a879003b5bf34273d210453866b256ef0856e6ff57f5563b9fc8b",
-      "parts": [
-        "video--shoot-05.mp4"
       ]
     },
     {
@@ -203,19 +223,107 @@
       ]
     },
     {
-      "output": "assets/videos/shoot-08.mp4",
-      "bytes": 3413611,
-      "sha256": "8a81f5cbd3d64484d45d9d109b929ec1201b445f1b335833321dcd487532b62d",
+      "output": "assets/videos/ai-10.mp4",
+      "bytes": 2016007,
+      "sha256": "0f66d78a887e4c088a4b256640fb9657c89ec127bc8f51eee6931fce9f3a86ca",
       "parts": [
-        "video--shoot-08.mp4"
+        "video--ai-10.mp4"
       ]
     },
     {
-      "output": "assets/videos/shoot-09.mp4",
-      "bytes": 2468040,
-      "sha256": "ff1fe6a380f175cda1a939139a368d42c8a63e3519a99ed41d19ac5a5ccfd517",
+      "output": "assets/videos/ai-11.mp4",
+      "bytes": 7598948,
+      "sha256": "0647ddfcc42c105453f1ac35e942471caa94e6a166b2472ce5a8f237dabded0b",
       "parts": [
-        "video--shoot-09.mp4"
+        "video--ai-11.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-10.mp4",
+      "bytes": 3255034,
+      "sha256": "846f9e8c86ceb18a54a0fb0984b15f7fb838747cc4dcda58c477fe083d7ee094",
+      "parts": [
+        "video--shoot-10.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-11.mp4",
+      "bytes": 2356310,
+      "sha256": "fe94069b893bb97349189a8f39997f6778c0c0f104675fed6e59410d56f107e4",
+      "parts": [
+        "video--shoot-11.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-12.mp4",
+      "bytes": 2165802,
+      "sha256": "741cbcaeee31e06035d21fbc8854a27c55185f901ffeb84d9176b4c10b1d6ee2",
+      "parts": [
+        "video--shoot-12.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-13.mp4",
+      "bytes": 2946748,
+      "sha256": "5dbf4efeaf1ef986039ef63865d7023ff0db186f797f7477d7221d94d6f43fa5",
+      "parts": [
+        "video--shoot-13.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-14.mp4",
+      "bytes": 2744331,
+      "sha256": "13bbfc6426c6dac1f7d2b164c912fa316cbf4936cf6be602d82c83f0995a1efc",
+      "parts": [
+        "video--shoot-14.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-15.mp4",
+      "bytes": 2083899,
+      "sha256": "f8ae869cb569914d46ea56d9a30326539f02d44890f29646f8e1e3cccb69c103",
+      "parts": [
+        "video--shoot-15.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-16.mp4",
+      "bytes": 1811942,
+      "sha256": "ce6009bb2c61dbeea3e112f1f87fc95da3968dd93a707420ede250145ac28798",
+      "parts": [
+        "video--shoot-16.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-17.mp4",
+      "bytes": 1877623,
+      "sha256": "5ebbafc2290a781261d1d85f7888758d2f49e1970ed9c1a09f213e664e995153",
+      "parts": [
+        "video--shoot-17.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-18.mp4",
+      "bytes": 2088616,
+      "sha256": "298d51071af57463a623db9474b33ca7676aba40c58342d5a28723a9b83fab95",
+      "parts": [
+        "video--shoot-18.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-19.mp4",
+      "bytes": 2953874,
+      "sha256": "3323f29871e3e79ab21ac1a47e407d57833cab37176a2ac740ba29d7d7e35e9c",
+      "parts": [
+        "video--shoot-19.mp4"
+      ]
+    },
+    {
+      "output": "assets/videos/shoot-20.mp4",
+      "bytes": 2160556,
+      "sha256": "80d36e5ab7c4ef5cab085ced1d6aebfde5367852046f93814872a3bc7f8150ae",
+      "parts": [
+        "video--shoot-20.mp4"
       ]
     }
   ],
