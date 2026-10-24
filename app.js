@@ -8,6 +8,15 @@
   let currentCategory = 'ai';
   let currentWork = null;
   let lastFocused = null;
+  let compatiblePlayback = false;
+  function updatePlaybackMeta() {
+    const work = currentWork;
+    const width = compatiblePlayback ? work.fallbackWidth : work.width;
+    const height = compatiblePlayback ? work.fallbackHeight : work.height;
+    const fps = compatiblePlayback ? work.fallbackFps : work.fps;
+    const quality = compatiblePlayback ? '兼容播放（720p） · ' : work.quality === 'original' ? '原画质 · ' : '';
+    document.querySelector('#player-meta').textContent = `${quality}${width} × ${height} · ${fps} FPS · ${work.duration}`;
+  }
   function render(category) {
     currentCategory = category;
     grid.classList.toggle('portrait-grid',category === 'shoot');
@@ -53,16 +62,23 @@
   function openWork(work) {
     if (!dialog.open) lastFocused = document.activeElement;
     currentWork = work;
+    compatiblePlayback = false;
     dialog.classList.toggle('portrait-player',work.category === 'shoot');
     document.querySelector('#player-title').textContent = work.title;
     document.querySelector('#player-category').textContent = label[work.category];
     document.querySelector('#player-code').textContent = `ZYJ / ${work.id.toUpperCase()}`;
-    document.querySelector('#player-meta').textContent = `${work.width} × ${work.height} · ${work.fps} FPS · ${work.duration}`;
+    updatePlaybackMeta();
+    const download = document.querySelector('#original-download');
+    download.hidden = work.quality !== 'original';
+    download.href = work.src;
+    download.download = work.original;
     const group = currentCategory === 'all' ? works : works.filter(w=>w.category===currentCategory);
     const inGroup = group.indexOf(work);
     document.querySelector('#player-counter').textContent = `${String(inGroup<0?1:inGroup+1).padStart(2,'0')} / ${String(inGroup<0?works.length:group.length).padStart(2,'0')}`;
     document.querySelector('#player-error').hidden = true;
     document.querySelector('#video-direct').href = work.src;
+    document.querySelector('#video-direct').textContent = work.quality === 'original' ? '直接打开原片 ↗' : '直接打开视频 ↗';
+    document.querySelector('#compatible-play').hidden = !work.fallbackSrc;
     video.src = work.src;video.poster = work.poster;
     if (!dialog.open) dialog.showModal();
     document.body.classList.add('player-open');
@@ -80,9 +96,24 @@
   document.querySelector('#close-player').addEventListener('click',closeWork);
   document.querySelector('#prev-work').addEventListener('click',()=>step(-1));
   document.querySelector('#next-work').addEventListener('click',()=>step(1));
+  document.querySelector('#compatible-play').addEventListener('click',()=>{
+    if (!currentWork?.fallbackSrc) return;
+    compatiblePlayback = true;
+    updatePlaybackMeta();
+    document.querySelector('#player-error').hidden = true;
+    document.querySelector('#compatible-play').hidden = true;
+    video.src = currentWork.fallbackSrc;
+    video.play().catch(()=>{});
+  });
   dialog.addEventListener('close',()=>{video.pause();video.removeAttribute('src');video.load();document.body.classList.remove('player-open');lastFocused?.focus({preventScroll:true});});
   dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)closeWork();}});
-  video.addEventListener('error',()=>{if(dialog.open&&video.hasAttribute('src'))document.querySelector('#player-error').hidden=false;});
+  video.addEventListener('error',()=>{
+    if (!dialog.open || !video.hasAttribute('src')) return;
+    document.querySelector('#player-error-text').textContent = currentWork?.codec === 'hevc' && !compatiblePlayback
+      ? '当前设备可能不支持这部 HEVC 原片。可下载原片，或手动选择兼容播放。'
+      : '视频暂时无法播放，可直接打开视频重试。';
+    document.querySelector('#player-error').hidden = false;
+  });
   document.querySelector('#copy-name').addEventListener('click',async()=>{
     const name='张永杰';
     try {
